@@ -41,7 +41,9 @@ INSTALLED_APPS = [
 # подключаем ещё приложения # Видны в панели admin
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'simpleapp'
+    'simpleapp',
+#Установим пакет с помощью следующей команды: python -m pip install django-filter и добавим в settings.py
+    'django_filters'
 ]
 
 SITE_ID = 1  #D1.3 Второй скринкаст. Не запускалась панель admin
@@ -132,4 +134,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # static папка (И в настройках добавить строчку в самом конце, для подгрузки стилей из папки static :)
-# STATICFILES_DIRS = [ BASE_DIR / "static" ]
+STATICFILES_DIRS = [ BASE_DIR / "static" ]
